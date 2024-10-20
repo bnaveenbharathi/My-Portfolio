@@ -34,9 +34,10 @@
     z-index: 999;
     box-shadow: 0px 2px 5px rgb(255, 0, 79, 0.4), 0px 3px 7px rgb(255, 0, 79, 0.4);
   }
- nav h2{
+ nav h2 a{
   color: #ff004f;
   text-transform: uppercase;
+  text-decoration: none;
  }
 
  nav ul {
