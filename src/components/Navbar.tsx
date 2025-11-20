@@ -14,21 +14,19 @@ export const Navbar = () => {
     { id: "achievements", label: "Achievements", icon: "🏆" },
   ];
 
-  // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 100; // Account for fixed navbar
+      const offsetTop = element.offsetTop - 100; 
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth"
       });
       setActiveSection(sectionId);
-      setIsMobileMenuOpen(false); // Close mobile menu after navigation
+      setIsMobileMenuOpen(false); 
     }
   };
 
-  // Scroll spy - detect which section is in view
   useEffect(() => {
     const sections = [
       { id: "about", label: "About", icon: "👨‍💻" },
@@ -56,12 +54,11 @@ export const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll(); 
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -71,7 +68,6 @@ export const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // Close mobile menu on window resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -88,7 +84,6 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           
-          {/* Logo */}
           <div 
             onClick={scrollToTop}
             className="flex items-center gap-2 sm:gap-3 group cursor-pointer"
@@ -102,7 +97,6 @@ export const Navbar = () => {
             </span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-2 bg-gray-800/50 rounded-full px-3 py-2 border border-gray-700/50">
             {navItems.map((item, index) => (
               <button
@@ -128,7 +122,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden flex items-center justify-center w-10 h-10 bg-gray-800/60 border border-gray-700/60 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/60 transition-all"
@@ -142,7 +135,6 @@ export const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         <div
           className={`
             md:hidden overflow-hidden transition-all duration-300 ease-in-out

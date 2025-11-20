@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import naveen from '../assets/img/naveen.png'
 import { FaRocket, FaCode, FaBrain} from 'react-icons/fa'
@@ -15,7 +16,6 @@ export const About = () => {
 
   return (
     <div className='about-section relative min-h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-8 overflow-hidden'>
-      {/* Animated background gradient follows mouse, but only on desktop */}
       <div 
         className="hidden md:block absolute w-96 h-96 bg-gradient-to-r from-gray-600/20 to-gray-500/20 rounded-full blur-3xl pointer-events-none transition-all duration-300"
         style={{
@@ -26,7 +26,6 @@ export const About = () => {
       <div className="absolute top-20 left-10 w-20 h-20 border-4 border-gray-600/30 rounded-lg animate-spin-slow hidden sm:block"></div>
       <div className="absolute top-1/2 right-20 w-12 h-12 bg-gray-600/20 rotate-45 animate-pulse hidden sm:block"></div>
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
-        {/* Text Section */}
         <div className="space-y-8 animate-fade-in opacity-0 animation-delay-100 text-center md:text-left">
           <div className="inline-block">
             <span className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest poppins font-semibold">
@@ -58,7 +57,6 @@ export const About = () => {
             </p>
           </div>
         </div>
-        {/* Image Section */}
         <div className="relative animate-fade-in opacity-0 animation-delay-200 flex justify-center items-center">
           <div className="relative">
             <div className="relative border-8 border-gray-300 p-2 overflow-hidden rounded-full border-gray-700/50 shadow-2xl  mx-auto bg-gray-900">
@@ -68,7 +66,6 @@ export const About = () => {
                 className="w-full h-full object-cover scale-x-[-1] relative z-10 rounded-full"
               />
             </div>
-            {/* Floating Info Cards - only on desktop */}
             <div className="absolute -bottom-6 -left-6 bg-gray-800/90 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-3 sm:p-4 shadow-xl animate-float hidden md:block">
               <div className="flex items-center gap-2 sm:gap-3">
                 <FaCode className="text-xl sm:text-3xl text-gray-400" />

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {  FaCalendarAlt, FaMapMarkerAlt, FaChevronDown } from 'react-icons/fa'
+import { FaCalendarAlt, FaMapMarkerAlt, FaChevronDown } from 'react-icons/fa'
 
 interface ExperienceItem {
   role: string
@@ -17,23 +17,23 @@ export const Experience = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const experiences: ExperienceItem[] = [
-    
-   {
-  role: 'Flutter Development Intern',
-  company: 'Qoresys',
-  location: 'In-Office',
-  period: 'Mar 2024',
-  startDate: '2024-03',
-  endDate: '2024-03',
-  color: 'from-blue-400 to-blue-600',
-technologies: ['Flutter', 'Dart', 'Bloc/Provider', 'REST APIs','Firebase'],
- description: [
-  'Engineered and deployed high-performance Flutter applications with adaptive, responsive UI layouts optimized for Android devices.',
-  'Implemented core features, API integrations, and state management workflows to ensure reliability, scalability, and maintainable architecture across the app lifecycle.'
-]
 
-},
-{
+    {
+      role: 'Flutter Development Intern',
+      company: 'Qoresys',
+      location: 'In-Office',
+      period: 'Mar 2024',
+      startDate: '2024-03',
+      endDate: '2024-03',
+      color: 'from-blue-400 to-blue-600',
+      technologies: ['Flutter', 'Dart', 'Bloc/Provider', 'REST APIs', 'Firebase'],
+      description: [
+        'Engineered and deployed high-performance Flutter applications with adaptive, responsive UI layouts optimized for Android devices.',
+        'Implemented core features, API integrations, and state management workflows to ensure reliability, scalability, and maintainable architecture across the app lifecycle.'
+      ]
+
+    },
+    {
       role: 'Frontend Development Intern',
       company: 'Ocean Academy',
       location: 'Remote',
@@ -47,38 +47,38 @@ technologies: ['Flutter', 'Dart', 'Bloc/Provider', 'REST APIs','Firebase'],
         'Collaborated effectively with the team, demonstrating adaptability and strong communication skills in a professional setting while learning industry-standard development workflows.',
       ]
     },
-{
-  role: 'Application Development Intern',
-  company: 'Learnlike',
-  location: 'In-Office',
-  period: 'Jul 2025',
-  startDate: '2025-07',
-  endDate: '2025-07',
-  color: 'from-purple-400 to-purple-600',
-  technologies: ['React', 'JavaScript', 'PHP', 'REST APIs', 'Git'],
-  description: [
-    'Developed cross-platform interfaces using Flutter and React, delivering responsive layouts, smooth performance, and a consistent user experience across devices.',
-    'Optimized backend logic in PHP to ensure seamless data synchronization, faster response times, and improved overall workflow efficiency.'
-  ]
-}
-,
-{
-  role: 'Software Development Intern',
-  company: 'WG TECH SOLUTIONS',
-  location: 'Remote',
-  period: 'Aug 2025',
-  startDate: '2025-08',
-  endDate: '2025-11',
-  color: 'from-orange-400 to-orange-600',
-  technologies: [
-    'Python', 'Flask', 'FastAPI', 'Computer Vision', 
-    'AI Automation', 'Machine Learning', 'Git', 'APIs'
-  ],
-  description: [
-    'Developed advanced computer vision models for healthcare and agriculture, enabling accurate gesture and posture tracking for real-time monitoring systems.',
-    'Engineered Python automation pipelines using Flask and FastAPI to support real-time data processing, seamless integrations, and scalable backend workflows.'
-  ]
-}
+    {
+      role: 'Application Development Intern',
+      company: 'Learnlike',
+      location: 'In-Office',
+      period: 'Jul 2025',
+      startDate: '2025-07',
+      endDate: '2025-07',
+      color: 'from-purple-400 to-purple-600',
+      technologies: ['React', 'JavaScript', 'PHP', 'REST APIs', 'Git'],
+      description: [
+        'Developed cross-platform interfaces using Flutter and React, delivering responsive layouts, smooth performance, and a consistent user experience across devices.',
+        'Optimized backend logic in PHP to ensure seamless data synchronization, faster response times, and improved overall workflow efficiency.'
+      ]
+    }
+    ,
+    {
+      role: 'Software Development Intern',
+      company: 'WG TECH SOLUTIONS',
+      location: 'Remote',
+      period: 'Aug 2025',
+      startDate: '2025-08',
+      endDate: '2025-11',
+      color: 'from-orange-400 to-orange-600',
+      technologies: [
+        'Python', 'Flask', 'FastAPI', 'Computer Vision',
+        'AI Automation', 'Machine Learning', 'Git', 'APIs'
+      ],
+      description: [
+        'Developed advanced computer vision models for healthcare and agriculture, enabling accurate gesture and posture tracking for real-time monitoring systems.',
+        'Engineered Python automation pipelines using Flask and FastAPI to support real-time data processing, seamless integrations, and scalable backend workflows.'
+      ]
+    }
 
 
   ]
@@ -119,8 +119,8 @@ technologies: ['Flutter', 'Dart', 'Bloc/Provider', 'REST APIs','Firebase'],
                 style={{ animationDelay: `${(index + 2) * 200}ms` }}
               >
                 <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gray-800 border-4 border-gray-500 hidden md:block animate-pulse"></div>
-                <div className={`ml-0 sm:ml-20 md:ml-0 ${index % 2 === 0 ? 'md:pr-[calc(50%+2rem)]' : 'md:pl-[calc(50%+2rem)]'}`}> 
-                  <div 
+                <div className={`ml-0 sm:ml-20 md:ml-0 ${index % 2 === 0 ? 'md:pr-[calc(50%+2rem)]' : 'md:pl-[calc(50%+2rem)]'}`}>
+                  <div
                     className="bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-300 hover:shadow-2xl group cursor-pointer"
                     onClick={() => toggleExpand(index)}
                   >
@@ -132,11 +132,11 @@ technologies: ['Flutter', 'Dart', 'Bloc/Provider', 'REST APIs','Firebase'],
                             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-200 poppins group-hover:text-gray-100 transition-colors">
                               {exp.role}
                             </h3>
-                            <p className={`text-base sm:text-lg font-semibold mt-1 bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}> 
+                            <p className={`text-base sm:text-lg font-semibold mt-1 bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}>
                               {exp.company}
                             </p>
                           </div>
-                          <div className={`text-gray-400 transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''}`}> 
+                          <div className={`text-gray-400 transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''}`}>
                             <FaChevronDown />
                           </div>
                         </div>
@@ -167,10 +167,9 @@ technologies: ['Flutter', 'Dart', 'Bloc/Provider', 'REST APIs','Firebase'],
                         </div>
                       </div>
                     </div>
-                    <div 
-                      className={`transition-all duration-500 overflow-hidden ${
-                        expandedIndex === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                      }`}
+                    <div
+                      className={`transition-all duration-500 overflow-hidden ${expandedIndex === index ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                        }`}
                     >
                       <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t border-gray-700/50 pt-4 sm:pt-6">
                         <div className="space-y-2 sm:space-y-3">

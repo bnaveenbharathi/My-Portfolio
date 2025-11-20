@@ -39,7 +39,6 @@ export const Main = () => {
 
   return (
     <div className='About-us relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] md:h-[90vh] gap-8 md:gap-12 overflow-hidden px-4 sm:px-6'>
-      {/* Floating code blocks - hidden on mobile */}
       <div className="hidden md:block absolute left-2 top-1/4 space-y-6 animate-fade-in opacity-0 animation-delay-200">
         <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 transform hover:scale-105 transition-all duration-300 animate-float">
           <div className="flex items-center gap-2 mb-2">
@@ -63,7 +62,6 @@ export const Main = () => {
         </div>
       </div>
 
-      {/* Floating terminal/status blocks - hidden on mobile */}
       <div className="hidden md:block absolute right-5 bottom-1/2 space-y-6 animate-fade-in opacity-0 animation-delay-400">
         <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 transform hover:scale-105 transition-all duration-300 animate-float">
           <div className="flex items-center gap-2 mb-2">
@@ -99,7 +97,7 @@ export const Main = () => {
             Bharathi
           </h1>
         </div>
-      {/* Profile Image Section */}
+      
       <div className="w-full max-w-[320px] sm:max-w-sm relative group perspective-1000 animate-fade-in opacity-0 animation-delay-300 mb-8 md:mb-0">
         <div className="absolute -inset-4 bg-gradient-to-r from-gray-600 via-gray-500 to-gray-700 rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
         <div className="relative preserve-3d group-hover:rotate-y-5 transition-all duration-700 ease-out animate-float-slow">
@@ -120,7 +118,6 @@ export const Main = () => {
         </div>
       </div>
 
-      {/* Main Content Section */}
       <div className="w-full max-w-lg sm:max-w-2xl space-y-6">
         <div className="space-y-4">
           <h3 className="hidden md:block text-gray-500 text-lg sm:text-2xl poppins font-light tracking-wide mb-3 animate-fade-in opacity-0 animation-delay-100">

@@ -140,11 +140,9 @@ export const Projects = () => {
   return (
     <div className='projects-section relative min-h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-8 overflow-hidden'>
       
-      {/* Animated Background Elements - hidden on mobile */}
       <div className="absolute top-10 right-20 w-20 h-20 bg-gray-600/10 rounded-full animate-pulse hidden sm:block"></div>
       <div className="absolute bottom-20 left-10 w-16 h-16 border-4 border-gray-600/20 rotate-45 animate-spin-slow hidden sm:block"></div>
 
-      {/* Project Modal */}
       {selectedProject && (
         <div 
           className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fade-in"
@@ -154,7 +152,6 @@ export const Projects = () => {
             className="bg-[#1b1b1e]/98 backdrop-blur-xl border border-gray-700/70 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               onClick={() => setSelectedProject(null)}
               className="absolute top-6 right-6 text-gray-400 hover:text-gray-200 transition-all z-10 bg-gray-800/80 hover:bg-gray-700/80 p-3 rounded-full border border-gray-700/50 hover:border-gray-600"
@@ -162,9 +159,7 @@ export const Projects = () => {
               <FaTimes className="text-2xl" />
             </button>
 
-            {/* Modal Content */}
             <div className="p-8">
-              {/* Image Section */}
               <div className="relative h-80 rounded-2xl overflow-hidden mb-8 border border-gray-700/50">
                 <img 
                   src={selectedProject.image} 
@@ -174,7 +169,6 @@ export const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
               </div>
 
-              {/* Title & Icon */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="text-5xl text-gray-300">
                   {selectedProject.icon}
@@ -189,7 +183,6 @@ export const Projects = () => {
                 </div>
               </div>
 
-              {/* Full Description */}
               {selectedProject.fullDescription && (
                 <div className="mb-8 bg-gray-800/30 border border-gray-700/50 rounded-2xl p-6">
                   <h3 className="text-xl font-semibold text-gray-200 poppins mb-3 flex items-center gap-2">
@@ -202,7 +195,6 @@ export const Projects = () => {
                 </div>
               )}
 
-              {/* Key Features */}
               {selectedProject.features && selectedProject.features.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-200 poppins mb-4 flex items-center gap-2">
@@ -223,7 +215,6 @@ export const Projects = () => {
                 </div>
               )}
 
-              {/* Technologies */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-200 poppins mb-4">
                   Technologies Used
@@ -240,7 +231,6 @@ export const Projects = () => {
                 </div>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex flex-wrap gap-4">
                 <a
                   href={selectedProject.github}
@@ -270,7 +260,6 @@ export const Projects = () => {
 
       <div className="max-w-7xl w-full relative z-10">
         
-        {/* Section Header with Number */}
        <div className="text-center mb-10 animate-fade-in opacity-0 animation-delay-100">
           <div className="inline-block">
             <span className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest poppins font-semibold">
@@ -288,7 +277,6 @@ export const Projects = () => {
           </p>
         </div>
 
-        {/* Projects Grid - Responsive Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
@@ -299,10 +287,8 @@ export const Projects = () => {
             >
               <div className="relative h-full bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-500 hover:shadow-2xl flex flex-col">
                 
-                {/* Gradient Background on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 z-0`}></div>
 
-                {/* Image Section with Advanced Hover */}
                 <div className="relative h-40 sm:h-56 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -310,10 +296,8 @@ export const Projects = () => {
                     className="w-full h-full object-cover transform group-hover:scale-110 group-hover:rotate-2 transition-all duration-700"
                   />
                   
-                  {/* Colored Overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-40 group-hover:opacity-0 transition-opacity duration-500 mix-blend-multiply`}></div>
                   
-                  {/* Hover Overlay with Icon */}
                   <div className="absolute inset-0 bg-gray-900/90 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                     <div className="text-center transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                       <div className={`text-4xl sm:text-6xl mb-3 bg-gradient-to-br ${project.color} text-transparent bg-clip-text animate-bounce-slow`}>
@@ -324,20 +308,16 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                {/* Content Section */}
                 <div className="relative p-4 sm:p-6 flex-1 flex flex-col z-10">
                   
-                  {/* Project Title */}
                   <h3 className="text-base sm:text-xl font-bold text-gray-100 poppins mb-2 sm:mb-3 group-hover:text-white transition-colors line-clamp-2 min-h-[40px] sm:min-h-[56px]">
                     {project.title}
                   </h3>
 
-                  {/* Description */}
                   <p className="text-gray-400 montserrat text-xs sm:text-sm leading-relaxed mb-2 sm:mb-4 line-clamp-3 flex-1">
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-1 sm:gap-2 mb-2 sm:mb-4">
                     {project.technologies.slice(0, 4).map((tech, techIndex) => (
                       <span
@@ -354,7 +334,6 @@ export const Projects = () => {
                     )}
                   </div>
 
-                  {/* Bottom Section - Links */}
                   <div className="flex items-center justify-between pt-2 sm:pt-4 border-t border-gray-700/30">
                     <div className="flex gap-2 sm:gap-4 text-gray-400 text-lg sm:text-xl">
                       <a 
@@ -382,7 +361,6 @@ export const Projects = () => {
                   </div>
                 </div>
 
-                {/* Animated Corner Glow */}
                 <div className={`absolute -top-8 sm:-top-12 -right-8 sm:-right-12 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 rounded-full`}></div>
                 <div className={`absolute -bottom-8 sm:-bottom-12 -left-8 sm:-left-12 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-tr ${project.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 rounded-full`}></div>
               </div>

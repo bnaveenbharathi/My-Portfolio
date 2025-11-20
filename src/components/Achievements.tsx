@@ -89,7 +89,6 @@ export const Achievements = () => {
 
   return (
     <div className='achievements-section relative min-h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-8 overflow-hidden'>
-      {/* Enhanced Background Elements - hidden on mobile */}
       <div className="absolute top-20 right-10 w-24 h-24 bg-gray-600/10 rounded-full animate-pulse blur-xl hidden sm:block"></div>
       <div className="absolute bottom-20 left-20 w-16 h-16 border-4 border-gray-600/20 rotate-45 animate-spin-slow hidden sm:block"></div>
       <div className="absolute top-1/2 left-10 w-10 h-10 border-4 border-gray-500/20 rounded-full animate-bounce-slow hidden sm:block"></div>
@@ -149,7 +148,6 @@ export const Achievements = () => {
             </div>
           </div>
         </div>
-        {/* Other Achievements Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-16">
           {achievements.slice(1).map((achievement, index) => (
             <div
@@ -158,9 +156,9 @@ export const Achievements = () => {
               style={{ animationDelay: `${(index + 3) * 150}ms` }}
             >
               <div className="relative h-full bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-gray-600 transition-all duration-500 hover:shadow-2xl">
-                {/* Background Gradient */}
+                
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-700/10 via-transparent to-gray-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                {/* Image Section */}
+              
                 <div className="relative h-32 sm:h-56 overflow-hidden">
                   <img 
                     src={achievement.image} 
@@ -168,34 +166,34 @@ export const Achievements = () => {
                     className="w-full h-full object-cover transform group-hover:scale-110 group-hover:rotate-2 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
-                  {/* Category Badge */}
+            
                   <div className="absolute top-2 sm:top-4 right-2 sm:right-4 px-2 sm:px-3 py-1 sm:py-1.5 bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-full">
                     <p className="text-xs text-gray-300 poppins uppercase tracking-wider font-semibold">
                       {achievement.category}
                     </p>
                   </div>
-                  {/* Year Badge - Bottom Left */}
+                 
                   <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 px-2 sm:px-4 py-1 sm:py-2 bg-gray-900/90 backdrop-blur-md border border-gray-700/50 rounded-xl">
                     <p className="text-xs sm:text-lg font-bold bebas text-gray-100">{achievement.year}</p>
                   </div>
                 </div>
-                {/* Content */}
+                
                 <div className="relative z-10 p-3 sm:p-6">
-                  {/* Title */}
+              
                   <h3 className="text-xs sm:text-lg font-bold text-gray-100 poppins mb-1 sm:mb-2 group-hover:text-white transition-colors leading-tight min-h-[32px] sm:min-h-[56px]">
                     {achievement.title}
                   </h3>
-                  {/* Organization */}
+                
                   <div className="flex items-center gap-1 sm:gap-2 mb-2 sm:mb-3 text-gray-400">
                     <FaCode className="text-xs sm:text-sm text-gray-500 flex-shrink-0" />
                     <p className="montserrat text-xs sm:text-sm line-clamp-1">{achievement.organization}</p>
                   </div>
-                  {/* Description */}
+                 
                   <p className="text-gray-400 montserrat text-xs sm:text-sm leading-relaxed line-clamp-3">
                     {achievement.description}
                   </p>
                 </div>
-                {/* Hover Glow Effect */}
+               
                 <div className="absolute -bottom-6 sm:-bottom-10 -right-6 sm:-right-10 w-16 sm:w-32 h-16 sm:h-32 bg-gray-500/20 rounded-full blur-3xl group-hover:bg-gray-400/30 transition-all duration-500"></div>
               </div>
             </div>

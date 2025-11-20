@@ -33,11 +33,10 @@ export const Footer = () => {
       
       <div className="max-w-7xl mx-auto px-6 py-12">
         
-        {/* Main Content - Centered Layout */}
+        
         <div className="text-center space-y-8 mb-12">
           
 
-          {/* Tagline */}
           <p className="text-gray-400 montserrat text-base max-w-2xl mx-auto leading-relaxed">
             <span className="text-gray-600 font-mono text-sm">// </span>
             Passionate about building innovative solutions that make a difference.
@@ -46,7 +45,6 @@ export const Footer = () => {
             Let's build something amazing together!
           </p>
 
-          {/* Social Media Links */}
           <div className="flex items-center justify-center gap-4 py-4">
             {socialLinks.map((social, index) => (
               <a
@@ -63,7 +61,7 @@ export const Footer = () => {
             ))}
           </div>
 
-          {/* Email */}
+       
           <div className="inline-block">
             <a 
               href="mailto:naveenbharathi5050@gmail.com"
@@ -76,7 +74,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          {/* Inspirational Quote */}
+          
           <div className="max-w-3xl mx-auto py-8">
             <div className="relative bg-gray-800/20 border border-gray-700/30 rounded-xl p-8">
               <div className="absolute -top-3 left-6 bg-[#1b1b1e] px-3 text-gray-500 font-mono text-sm">
@@ -99,13 +97,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
+    
         <div className="h-px bg-gradient-to-r from-transparent via-gray-700/50 to-transparent mb-8"></div>
 
-        {/* Bottom Section */}
+        
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           
-          {/* Copyright */}
+       
           <div className="text-center md:text-left">
             <p className="text-gray-400 font-mono text-sm flex items-center gap-2 justify-center md:justify-start">
               <span className="text-gray-600">&lt;!--</span>
@@ -118,7 +116,6 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Back to Top Button */}
           <button
             onClick={scrollToTop}
             className="flex items-center gap-2 px-5 py-2.5 bg-gray-800/60 border border-gray-700/60 rounded-xl text-gray-400 hover:text-gray-200 hover:border-gray-600 transition-all hover:scale-105 font-mono text-sm font-medium"
