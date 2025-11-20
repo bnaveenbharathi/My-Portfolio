@@ -1,1 +1,0 @@
-without my permission in code dont give the comments ok

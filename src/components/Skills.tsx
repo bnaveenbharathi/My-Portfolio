@@ -54,38 +54,38 @@ export const Skills = () => {
   ]
 
   return (
-    <div className='skills-section relative min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden'>
+    <div className='skills-section relative min-h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-8 overflow-hidden'>
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 border-4 border-gray-600/20 rounded-full animate-spin-slow"></div>
-      <div className="absolute bottom-20 left-10 w-24 h-24 bg-gray-600/10 rotate-45 animate-pulse"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 border-4 border-gray-500/20 animate-bounce-slow"></div>
+      {/* Animated Background Elements - hidden on mobile */}
+      <div className="absolute top-10 right-10 w-20 h-20 border-4 border-gray-600/20 rounded-full animate-spin-slow hidden sm:block"></div>
+      <div className="absolute bottom-20 left-10 w-16 h-16 bg-gray-600/10 rotate-45 animate-pulse hidden sm:block"></div>
+      <div className="absolute top-1/2 left-1/4 w-10 h-10 border-4 border-gray-500/20 animate-bounce-slow hidden sm:block"></div>
 
       <div className="max-w-7xl w-full relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in opacity-0 animation-delay-100">
+        <div className="text-center mb-10 animate-fade-in opacity-0 animation-delay-100">
           <div className="inline-block">
-            <span className="text-gray-500 text-sm uppercase tracking-widest poppins font-semibold">
+            <span className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest poppins font-semibold">
               My Tech Arsenal
             </span>
-            <div className="h-1 w-24 bg-gradient-to-r from-gray-500 to-transparent mx-auto mt-2 animate-width-expand"></div>
+            <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-gray-500 to-transparent mx-auto mt-2 animate-width-expand"></div>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mt-4 mb-4 bebas tracking-wider">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-4 bebas tracking-wider">
             <span className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 bg-clip-text text-transparent">
               SKILLS & EXPERTISE
             </span>
           </h2>
-          <p className="text-gray-400 montserrat max-w-2xl mx-auto">
+          <p className="text-gray-400 montserrat max-w-2xl mx-auto text-sm sm:text-base">
             Technologies I use to bring ideas to life
           </p>
         </div>
 
-        {/* Marquee Skills - Continuous Scroll */}
+        {/* Marquee Skills - Responsive Scroll */}
         <div className="space-y-8">
           {/* First Row - Left to Right */}
-          <div className="relative overflow-hidden">
-            <div className="flex gap-4 animate-marquee">
+          <div className="relative overflow-x-auto">
+            <div className="flex gap-2 sm:gap-4 animate-marquee min-w-[600px] sm:min-w-0">
               {[...skills, ...skills].map((skill, index) => (
                 <a
                   key={`${skill.name}-${index}`}
@@ -96,16 +96,14 @@ export const Skills = () => {
                   onMouseEnter={() => setHoveredSkill(skill.name)}
                   onMouseLeave={() => setHoveredSkill(null)}
                 >
-                  <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 hover:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl overflow-hidden w-32">
+                  <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-2 sm:p-4 hover:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl overflow-hidden w-20 sm:w-32">
                     
                     {/* Gradient Background on Hover */}
-                    <div 
-                      className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                    ></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
                     {/* Icon */}
-                    <div className="relative z-10 flex flex-col items-center gap-2">
-                      <div className="text-3xl text-gray-400 group-hover:text-gray-200 transition-colors">
+                    <div className="relative z-10 flex flex-col items-center gap-1 sm:gap-2">
+                      <div className="text-xl sm:text-3xl text-gray-400 group-hover:text-gray-200 transition-colors">
                         {skill.icon}
                       </div>
                       
@@ -131,8 +129,8 @@ export const Skills = () => {
           </div>
 
           {/* Second Row - Right to Left */}
-          <div className="relative overflow-hidden">
-            <div className="flex gap-4 animate-marquee-reverse">
+          <div className="relative overflow-x-auto">
+            <div className="flex gap-2 sm:gap-4 animate-marquee-reverse min-w-[600px] sm:min-w-0">
               {[...skills, ...skills].reverse().map((skill, index) => (
                 <a
                   key={`${skill.name}-reverse-${index}`}
@@ -143,16 +141,14 @@ export const Skills = () => {
                   onMouseEnter={() => setHoveredSkill(skill.name)}
                   onMouseLeave={() => setHoveredSkill(null)}
                 >
-                  <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 hover:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl overflow-hidden w-32">
+                  <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-2 sm:p-4 hover:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl overflow-hidden w-20 sm:w-32">
                     
                     {/* Gradient Background on Hover */}
-                    <div 
-                      className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                    ></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
                     {/* Icon */}
-                    <div className="relative z-10 flex flex-col items-center gap-2">
-                      <div className="text-3xl text-gray-400 group-hover:text-gray-200 transition-colors">
+                    <div className="relative z-10 flex flex-col items-center gap-1 sm:gap-2">
+                      <div className="text-xl sm:text-3xl text-gray-400 group-hover:text-gray-200 transition-colors">
                         {skill.icon}
                       </div>
                       
@@ -179,33 +175,33 @@ export const Skills = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in opacity-0 animation-delay-800">
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
-            <div className="text-4xl font-bold bebas bg-gradient-to-r from-orange-400 to-gray-600 bg-clip-text text-transparent">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 animate-fade-in opacity-0 animation-delay-800">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 sm:p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
+            <div className="text-2xl sm:text-4xl font-bold bebas bg-gradient-to-r from-orange-400 to-gray-600 bg-clip-text text-transparent">
               5+
             </div>
-            <p className="text-gray-400 text-sm montserrat mt-2">Frontend Techs</p>
+            <p className="text-gray-400 text-xs sm:text-sm montserrat mt-2">Frontend Techs</p>
           </div>
           
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
-            <div className="text-4xl font-bold bebas bg-gradient-to-r from-green-400 to-gray-600 bg-clip-text text-transparent">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 sm:p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
+            <div className="text-2xl sm:text-4xl font-bold bebas bg-gradient-to-r from-green-400 to-gray-600 bg-clip-text text-transparent">
               5+
             </div>
-            <p className="text-gray-400 text-sm montserrat mt-2">Backend Frameworks</p>
+            <p className="text-gray-400 text-xs sm:text-sm montserrat mt-2">Backend Frameworks</p>
           </div>
           
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
-            <div className="text-4xl font-bold bebas bg-gradient-to-r from-blue-400 to-gray-600 bg-clip-text text-transparent">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 sm:p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
+            <div className="text-2xl sm:text-4xl font-bold bebas bg-gradient-to-r from-blue-400 to-gray-600 bg-clip-text text-transparent">
               4+
             </div>
-            <p className="text-gray-400 text-sm montserrat mt-2">Database Systems</p>
+            <p className="text-gray-400 text-xs sm:text-sm montserrat mt-2">Database Systems</p>
           </div>
           
-          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
-            <div className="text-4xl font-bold bebas bg-gradient-to-r from-purple-400 to-gray-600 bg-clip-text text-transparent">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 sm:p-6 text-center hover:border-gray-600 transition-all hover:scale-105">
+            <div className="text-2xl sm:text-4xl font-bold bebas bg-gradient-to-r from-purple-400 to-gray-600 bg-clip-text text-transparent">
               6+
             </div>
-            <p className="text-gray-400 text-sm montserrat mt-2">Tools & AI Tech</p>
+            <p className="text-gray-400 text-xs sm:text-sm montserrat mt-2">Tools & AI Tech</p>
           </div>
         </div>
 

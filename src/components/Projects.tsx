@@ -138,11 +138,11 @@ export const Projects = () => {
   ]
 
   return (
-    <div className='projects-section relative min-h-screen flex items-center justify-center py-20 px-6 overflow-hidden'>
+    <div className='projects-section relative min-h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-8 overflow-hidden'>
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-10 right-20 w-32 h-32 bg-gray-600/10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 left-10 w-24 h-24 border-4 border-gray-600/20 rotate-45 animate-spin-slow"></div>
+      {/* Animated Background Elements - hidden on mobile */}
+      <div className="absolute top-10 right-20 w-20 h-20 bg-gray-600/10 rounded-full animate-pulse hidden sm:block"></div>
+      <div className="absolute bottom-20 left-10 w-16 h-16 border-4 border-gray-600/20 rotate-45 animate-spin-slow hidden sm:block"></div>
 
       {/* Project Modal */}
       {selectedProject && (
@@ -271,25 +271,25 @@ export const Projects = () => {
       <div className="max-w-7xl w-full relative z-10">
         
         {/* Section Header with Number */}
-       <div className="text-center mb-16 animate-fade-in opacity-0 animation-delay-100">
+       <div className="text-center mb-10 animate-fade-in opacity-0 animation-delay-100">
           <div className="inline-block">
-            <span className="text-gray-500 text-sm uppercase tracking-widest poppins font-semibold">
+            <span className="text-gray-500 text-xs sm:text-sm uppercase tracking-widest poppins font-semibold">
               Innovation Showcase
             </span>
-            <div className="h-1 w-24 bg-gradient-to-r from-gray-500 to-transparent mx-auto mt-2 animate-width-expand"></div>
+            <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-gray-500 to-transparent mx-auto mt-2 animate-width-expand"></div>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mt-4 mb-4 bebas tracking-wider">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mt-4 mb-4 bebas tracking-wider">
             <span className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 bg-clip-text text-transparent">
               PROJECTS
             </span>
           </h2>
-          <p className="text-gray-400 montserrat max-w-2xl mx-auto">
+          <p className="text-gray-400 montserrat max-w-2xl mx-auto text-sm sm:text-base">
             Building innovative solutions and growing through real-world challenges
           </p>
         </div>
 
-        {/* Projects Grid - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Grid - Responsive Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -303,8 +303,7 @@ export const Projects = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 z-0`}></div>
 
                 {/* Image Section with Advanced Hover */}
-                <div className="relative h-56 overflow-hidden">
-                  {/* Image */}
+                <div className="relative h-40 sm:h-56 overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -317,49 +316,47 @@ export const Projects = () => {
                   {/* Hover Overlay with Icon */}
                   <div className="absolute inset-0 bg-gray-900/90 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                     <div className="text-center transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <div className={`text-6xl mb-3 bg-gradient-to-br ${project.color} text-transparent bg-clip-text animate-bounce-slow`}>
+                      <div className={`text-4xl sm:text-6xl mb-3 bg-gradient-to-br ${project.color} text-transparent bg-clip-text animate-bounce-slow`}>
                         {project.icon}
                       </div>
-                      <p className="text-gray-300 poppins text-sm font-semibold">View Project</p>
+                      <p className="text-gray-300 poppins text-xs sm:text-sm font-semibold">View Project</p>
                     </div>
                   </div>
-
-               
                 </div>
 
                 {/* Content Section */}
-                <div className="relative p-6 flex-1 flex flex-col z-10">
+                <div className="relative p-4 sm:p-6 flex-1 flex flex-col z-10">
                   
                   {/* Project Title */}
-                  <h3 className="text-xl font-bold text-gray-100 poppins mb-3 group-hover:text-white transition-colors line-clamp-2 min-h-[56px]">
+                  <h3 className="text-base sm:text-xl font-bold text-gray-100 poppins mb-2 sm:mb-3 group-hover:text-white transition-colors line-clamp-2 min-h-[40px] sm:min-h-[56px]">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 montserrat text-sm leading-relaxed mb-4 line-clamp-3 flex-1">
+                  <p className="text-gray-400 montserrat text-xs sm:text-sm leading-relaxed mb-2 sm:mb-4 line-clamp-3 flex-1">
                     {project.description}
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1 sm:gap-2 mb-2 sm:mb-4">
                     {project.technologies.slice(0, 4).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-lg text-xs text-gray-300 poppins hover:bg-gray-700 hover:border-gray-600 transition-all"
+                        className="px-2 sm:px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-lg text-xs text-gray-300 poppins hover:bg-gray-700 hover:border-gray-600 transition-all"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="px-3 py-1 bg-gray-700/30 border border-gray-600/30 rounded-lg text-xs text-gray-400 poppins">
+                      <span className="px-2 sm:px-3 py-1 bg-gray-700/30 border border-gray-600/30 rounded-lg text-xs text-gray-400 poppins">
                         +{project.technologies.length - 4}
                       </span>
                     )}
                   </div>
 
                   {/* Bottom Section - Links */}
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-700/30">
-                    <div className="flex gap-4 text-gray-400 text-xl">
+                  <div className="flex items-center justify-between pt-2 sm:pt-4 border-t border-gray-700/30">
+                    <div className="flex gap-2 sm:gap-4 text-gray-400 text-lg sm:text-xl">
                       <a 
                         href={project.github} 
                         target="_blank" 
@@ -386,8 +383,8 @@ export const Projects = () => {
                 </div>
 
                 {/* Animated Corner Glow */}
-                <div className={`absolute -top-12 -right-12 w-24 h-24 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 rounded-full`}></div>
-                <div className={`absolute -bottom-12 -left-12 w-24 h-24 bg-gradient-to-tr ${project.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 rounded-full`}></div>
+                <div className={`absolute -top-8 sm:-top-12 -right-8 sm:-right-12 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 rounded-full`}></div>
+                <div className={`absolute -bottom-8 sm:-bottom-12 -left-8 sm:-left-12 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-tr ${project.color} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500 rounded-full`}></div>
               </div>
             </div>
           ))}
