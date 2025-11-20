@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// Removed unused useState import
 import { 
   FaReact, FaNodeJs, FaPhp, FaDocker, FaGithub, 
   FaHtml5, FaCss3Alt, FaJs 
@@ -19,7 +19,6 @@ interface Skill {
 }
 
 export const Skills = () => {
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
 
   const skills: Skill[] = [
     // Frontend
@@ -93,8 +92,7 @@ export const Skills = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative flex-shrink-0"
-                  onMouseEnter={() => setHoveredSkill(skill.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
+                  // Removed hoveredSkill handlers
                 >
                   <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-2 sm:p-4 hover:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl overflow-hidden w-20 sm:w-32">
                     
@@ -138,8 +136,7 @@ export const Skills = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative flex-shrink-0"
-                  onMouseEnter={() => setHoveredSkill(skill.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
+                  // Removed hoveredSkill handlers
                 >
                   <div className="relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-xl p-2 sm:p-4 hover:border-gray-600 transition-all duration-300 hover:scale-110 hover:shadow-2xl overflow-hidden w-20 sm:w-32">
                     
