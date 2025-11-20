@@ -13,7 +13,7 @@ export const Footer = () => {
     {
       name: 'LinkedIn',
       icon: <FaLinkedin />,
-      url: 'https://www.linkedin.com/in/b-naveen-bharathi-7452ab259/',
+      url: 'https://linkedin.com/in/bnaveenbharathi',
       color: 'hover:text-gray-100 hover:border-gray-500'
     },
     {
