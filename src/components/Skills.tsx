@@ -116,10 +116,7 @@ export const Skills = () => {
                       </div>
                     </div>
 
-                    {/* Animated Border */}
-                    <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${skill.color} opacity-20 blur-xl`}></div>
-                    </div>
+                 
                   </div>
                 </a>
               ))}
@@ -160,10 +157,7 @@ export const Skills = () => {
                       </div>
                     </div>
 
-                    {/* Animated Border */}
-                    <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${skill.color} opacity-20 blur-xl`}></div>
-                    </div>
+                   
                   </div>
                 </a>
               ))}
