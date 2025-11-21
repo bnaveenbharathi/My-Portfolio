@@ -6,6 +6,7 @@ import { Experience } from "./components/Experience"
 import { Projects } from "./components/Projects"
 import { Achievements } from "./components/Achievements"
 import {Footer} from "./components/Footer"
+import { Github } from "./components/Github"
 
 function App() {
 
@@ -16,6 +17,9 @@ function App() {
         <Main />
         <section id="about">
           <About />
+        </section>
+        <section id="github">
+          <Github />
         </section>
         <section id="experience">
           <Experience />
