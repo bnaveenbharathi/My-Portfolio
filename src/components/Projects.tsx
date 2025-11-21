@@ -6,6 +6,7 @@ import numberplate from '../assets/img/numberplate.jpg'
 import iqarena from '../assets/img/iqarena.jpeg'
 import learning from '../assets/img/learningplatform.png'
 import dating from '../assets/img/dating.png'
+import fimnews from '../assets/img/fimnews.jpeg'
 
 interface Project {
   title: string
@@ -42,6 +43,25 @@ export const Projects = () => {
 ],
       color: 'from-blue-400 to-cyan-600'
     },
+    {
+  title: 'FIM News – Real-Time Finance & Tech Updates App',
+  description: 'Developed a fast and reliable finance news app delivering real-time stock updates, business insights, and tech trends in under 60 words, available in Tamil and English.',
+  fullDescription: 'FIM News is a lightweight and efficient finance news application designed for investors, traders, and finance learners. The platform provides concise, real-time updates on stock markets, business developments, and technology trends. With dual-language support and personalized feeds, users can stay informed quickly and accurately without browsing multiple sources.',
+  icon: <FaNewspaper />,
+  image: fimnews,
+  github: 'https://play.google.com/store/apps/details?id=com.fimtech.fimnews',
+  technologies: ['React Native', 'RSS Feeds', 'API Integration', 'Push Notifications', 'Multilingual Support'],
+  features: [
+    'Real-time stock market updates and major index tracking',
+    'Concise finance news summaries under 60 words',
+    'Dual-language content in Tamil and English',
+    'Personalized news feed based on user interest',
+    'Instant push alerts for major market changes',
+    'Clean and user-friendly interface for quick reading'
+  ],
+  color: 'from-blue-500 to-indigo-600'
+}
+,
     {
       title: 'AI-Powered Student Learning Platform',
       description: 'Created an AI-driven personalized learning portal offering adaptive course suggestions, progress analytics, and interactive content. Integrated Flask, MongoDB, and AI for dynamic user experience.',
