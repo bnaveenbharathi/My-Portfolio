@@ -51,7 +51,7 @@ export const Experience = () => {
       {
       role: 'Application Development Intern',
       company: 'Learnlike',
-      location: 'In-Office',
+      location: 'Coimbatore In-Office',
       period: 'Jul 2025',
       startDate: '2025-07',
       endDate: '2025-07',
