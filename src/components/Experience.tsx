@@ -17,6 +17,66 @@ export const Experience = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const experiences: ExperienceItem[] = [
+    {
+      role: 'Edge AI Engineer Intern',
+      company: 'WG TECH SOLUTIONS',
+      location: 'Bangalore Office',
+      period: 'Jan 2026 - Present',
+      startDate: '2026-01',
+      endDate: 'Present',
+      color: 'from-green-400 to-green-600',
+      technologies: ['Edge AI', 'Computer Vision', 'Machine Learning', 'Python', 'TensorFlow', 'PyTorch'],
+      description: [
+        'Working on cutting-edge Edge AI solutions, developing and optimizing machine learning models for deployment on edge devices.',
+        'Implementing computer vision algorithms and AI-driven automation systems for real-time processing and intelligent decision-making.'
+      ]
+    },
+     {
+      role: 'Software Development Intern',
+      company: 'WG TECH SOLUTIONS',
+      location: 'Remote',
+      period: 'Aug 2025',
+      startDate: '2025-08',
+      endDate: '2025-11',
+      color: 'from-orange-400 to-orange-600',
+      technologies: [
+        'Python', 'Flask', 'FastAPI', 'Computer Vision',
+        'AI Automation', 'Machine Learning', 'Git', 'APIs'
+      ],
+      description: [
+        'Developed advanced computer vision models for healthcare and agriculture, enabling accurate gesture and posture tracking for real-time monitoring systems.',
+        'Engineered Python automation pipelines using Flask and FastAPI to support real-time data processing, seamless integrations, and scalable backend workflows.'
+      ]
+    },
+      {
+      role: 'Application Development Intern',
+      company: 'Learnlike',
+      location: 'In-Office',
+      period: 'Jul 2025',
+      startDate: '2025-07',
+      endDate: '2025-07',
+      color: 'from-purple-400 to-purple-600',
+      technologies: ['React', 'JavaScript', 'PHP', 'REST APIs', 'Git'],
+      description: [
+        'Developed cross-platform interfaces using Flutter and React, delivering responsive layouts, smooth performance, and a consistent user experience across devices.',
+        'Optimized backend logic in PHP to ensure seamless data synchronization, faster response times, and improved overall workflow efficiency.'
+      ]
+    }
+    ,
+     {
+      role: 'Frontend Development Intern',
+      company: 'Ocean Academy',
+      location: 'Remote',
+      period: 'Mar 2025 - Apr 2025',
+      startDate: '2025-03',
+      endDate: '2025-04',
+      color: 'from-cyan-400 to-blue-600',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Responsive Design', 'Git'],
+      description: [
+        'Completed a comprehensive one-month frontend development internship, sharpening technical skills and gaining real-world exposure to professional development practices.',
+        'Collaborated effectively with the team, demonstrating adaptability and strong communication skills in a professional setting while learning industry-standard development workflows.',
+      ]
+    },
 
     {
       role: 'Flutter Development Intern',
@@ -33,52 +93,7 @@ export const Experience = () => {
       ]
 
     },
-    {
-      role: 'Frontend Development Intern',
-      company: 'Ocean Academy',
-      location: 'Remote',
-      period: 'Mar 2025 - Apr 2025',
-      startDate: '2025-03',
-      endDate: '2025-04',
-      color: 'from-cyan-400 to-blue-600',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Responsive Design', 'Git'],
-      description: [
-        'Completed a comprehensive one-month frontend development internship, sharpening technical skills and gaining real-world exposure to professional development practices.',
-        'Collaborated effectively with the team, demonstrating adaptability and strong communication skills in a professional setting while learning industry-standard development workflows.',
-      ]
-    },
-    {
-      role: 'Application Development Intern',
-      company: 'Learnlike',
-      location: 'In-Office',
-      period: 'Jul 2025',
-      startDate: '2025-07',
-      endDate: '2025-07',
-      color: 'from-purple-400 to-purple-600',
-      technologies: ['React', 'JavaScript', 'PHP', 'REST APIs', 'Git'],
-      description: [
-        'Developed cross-platform interfaces using Flutter and React, delivering responsive layouts, smooth performance, and a consistent user experience across devices.',
-        'Optimized backend logic in PHP to ensure seamless data synchronization, faster response times, and improved overall workflow efficiency.'
-      ]
-    }
-    ,
-    {
-      role: 'Software Development Intern',
-      company: 'WG TECH SOLUTIONS',
-      location: 'Remote',
-      period: 'Aug 2025',
-      startDate: '2025-08',
-      endDate: '2025-11',
-      color: 'from-orange-400 to-orange-600',
-      technologies: [
-        'Python', 'Flask', 'FastAPI', 'Computer Vision',
-        'AI Automation', 'Machine Learning', 'Git', 'APIs'
-      ],
-      description: [
-        'Developed advanced computer vision models for healthcare and agriculture, enabling accurate gesture and posture tracking for real-time monitoring systems.',
-        'Engineered Python automation pipelines using Flask and FastAPI to support real-time data processing, seamless integrations, and scalable backend workflows.'
-      ]
-    }
+   
 
 
   ]
